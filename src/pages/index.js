@@ -130,7 +130,7 @@ const links = [
 // markup
 const IndexPage = () => {
   return (
-    <Layout pageTitle="My Home Page">
+    <Layout pageTitle="My Home Page" size="33">
       <h1 style={headingStyles}>
         Congratulations
         <br />

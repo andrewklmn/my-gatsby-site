@@ -2,10 +2,10 @@ import * as React from "react"
 import { Link } from 'gatsby';
 import { Title } from './Layout.sc';
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, size, children }) => {
   return (
     <div>
-      <Title>{pageTitle}</Title>
+      <Title size={size}>{pageTitle}</Title>
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
