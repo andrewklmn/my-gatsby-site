@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from 'gatsby';
-import Layout from '../components/Layout/Layout';
+import { Layout } from '../components/Layout/Layout';
+import { globalStateContext } from "../globalProvider";
 
 // styles
 const pageStyles = {
@@ -130,7 +131,10 @@ const links = [
 // markup
 const IndexPage = () => {
   return (
-    <Layout pageTitle="My Home Page" size="33">
+    <Layout pageTitle="My Home Page" size="33" style={pageStyles}>
+      <globalStateContext.Consumer>
+        {({ counter }) => <>Counter: {counter}</>}
+      </globalStateContext.Consumer>
       <h1 style={headingStyles}>
         Congratulations
         <br />

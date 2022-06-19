@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Title } from "./Layout.sc";
 
-const Layout = ({ pageTitle, size, children }) => {
+export const Layout = ({ pageTitle, size, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -36,4 +36,3 @@ const Layout = ({ pageTitle, size, children }) => {
     </div>
   );
 };
-export default Layout;
